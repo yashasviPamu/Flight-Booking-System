@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.casestudy.FlightBookingSystemApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.579 s <<< FAILURE! - in com.casestudy.FlightBookingSystemApplicationTests
+contextLoads  Time elapsed: 0.056 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'flightController': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flightRepository' defined in com.casestudy.flights.repository.FlightRepository defined in @EnableMongoRepositories declared on MongoRepositoriesRegistrar.EnableMongoRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property andlanding found for type String! Traversed path: Flight.takeOff.
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flightRepository' defined in com.casestudy.flights.repository.FlightRepository defined in @EnableMongoRepositories declared on MongoRepositoriesRegistrar.EnableMongoRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property andlanding found for type String! Traversed path: Flight.takeOff.
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property andlanding found for type String! Traversed path: Flight.takeOff.
+
